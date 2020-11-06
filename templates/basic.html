@@ -1,0 +1,84 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Строительство и ремонт под ключ заказать в Челябинске | ПСК «Урал»</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.css">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <!-- Slider Revolution CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/rs/css/settings.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/rs/css/layers.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/rs/css/navigation.css' %}a">
+</head>
+<body>
+{% include 'header.html' %}
+{% block content %}
+{% endblock %}
+{% include 'footer.html' %}
+
+{% block js %}
+<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+<script src="{% static 'assets/js/ajax-form.js' %}"></script>
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.scrollUp.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+<script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo_pcAdFNbTDCAvMwAD19oRTuEmb9M50c"></script>
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock %}
+
+
+<!-- Slider Revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING -->
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.actions.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.carousel.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.kenburn.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.layeranimation.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.migration.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.navigation.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.parallax.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.slideanims.min.js"></script>#}
+{#<script type="text/javascript" src="assets/rs/js/extensions/revolution.extension.video.min.js"></script>#}
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/lib/jquery.mousewheel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#lightgallery').lightGallery();
+    });
+</script>
+<script type="text/javascript">
+			console.log('Skiborg - https://skib.org');
+		</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,62 @@
+{% extends  'basic.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - Статья
+{% endblock %}
+
+{% block keywords %}
+    {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<main>
+    <div class="video-bg-area pt-120 pb-120" style="background-image:url({% static 'assets/img/new/page_top_bg_sm.png' %});margin-bottom: 40px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="b-video">
+                                <h2>Статьи</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="container">
+        <div class="blog-wrapper">
+            {% for post in allPosts %}
+             <div class="blog-item">
+                <img class="blog-item-img" src="{{ post.image.url }}" alt="">
+                <div class="blog-inner">
+                    <h4 class="blog-title">
+                        <a href="">{{ post.name }}</a>
+                    </h4>
+                    <p class="blog-text">{{ post.short_description }} </p>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+</main>
+
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock %}

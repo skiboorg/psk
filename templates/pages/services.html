@@ -1,0 +1,209 @@
+{% extends  'basic.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - Статья
+{% endblock %}
+
+{% block keywords %}
+    {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+  <main>
+    <div class="video-bg-area pt-120 pb-120" style="background-image:url({% static 'assets/img/new/page_top_bg_sm.png' %});margin-bottom: 40px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="b-video">
+
+                                <h2>Наши услуги</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    <!-- services-area start  -->
+    <div class="our-services-area pb-45">
+        <div class="container">
+
+            <div class="row">
+
+                   {% for service in allSevices %}
+                 <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="our-services-wrapper mb-140">
+                        <div class="our-services-img">
+                            <img src="{{ service.image.url }}" alt="">
+                            <div class="our-services-content">
+                                <h3>{{ service.name }}</h3>
+                                <p>{{ service.short_description }}</p>
+                                <div class="our-services-btn">
+                                    <a class="b-btn btn-gray" href="{% url 'service' service.nameSlug %}">
+                                        <span>подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <!-- services-area start  -->
+
+
+
+    <!-- testimonial-area -->
+    <div class="client-area black-bg pt-125 pb-130" style="background-image:url({% static 'assets/img/bg/bg-8.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                    <div class="section-title white-title text-center mb-70">
+                        <!-- <span>what our clients say</span> -->
+                        <h3 style="color: #fff;">Благодарственные письма</h3>
+                    </div>
+                </div>
+            </div>
+             <div class="demo-gallery">
+                <ul id="lightgallery" class="list-unstyled row">
+                    {% for review in allReviews %}
+                    <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ review.image.url }}" data-sub-html="Описание">
+                        <a href="">
+                            <img class="img-responsive" src="{{ review.image.url }}" alt="">
+                        </a>
+                    </li>
+                    {% endfor %}
+
+
+
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="work-button mt-30 text-center">
+                        <a class="b-btn btn-coral" href="#">
+                            <span>смотреть все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial-area end -->
+
+    <!-- work-area-start -->
+    <div class="work-area work-02 pt-125 pb-125 pl-55 pr-55">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 offset-lg-2 offset-xl-2">
+                    <div class="section-title text-center mb-70">
+                        <!-- <span>our Latest Works</span> -->
+                        <h1>ВЫПОЛНЕННЫЕ ОБЪЕКТЫ КОМПАНИИ<br> ПСК УРАЛ</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w2.jpg'); height: 340px; background-size: cover">
+                        <!--<div class="b-work-img">-->
+                        <!--<img src="assets/img/new/w1.jpeg" alt="">-->
+                        <!--</div>-->
+                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
+                            <div class="inner-work-2">
+                                <h2><a href="#">СНТ Мысы</a></h2>
+                                <p>19 улица, 72 участок, Дом</p>
+                                <div class="b-work-link">
+                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w3.jpg'); height: 340px; background-size: cover">
+                        <!-- <div class="b-work-img">
+                            <img src="assets/img/work/wo-02.jpg" alt="">
+                        </div> -->
+                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
+                            <div class="inner-work-2">
+                                <h2><a href="#">Фармленд</a></h2>
+                                <p>Бейвеля 37а</p>
+                                <div class="b-work-link">
+                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w4.jpg'); height: 340px; background-size: cover">
+
+                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
+                            <div class="inner-work-2">
+                                <h2><a href="#">Ул. Чичерина 36в, Квартира</a></h2>
+
+                                <div class="b-work-link">
+                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w5.jpg'); height: 340px; background-size: cover">
+
+                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
+                            <div class="inner-work-2">
+                                <h2><a href="#">Магнит</a></h2>
+
+                                <div class="b-work-link">
+                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="work-button mt-30 text-center">
+                        <a class="b-btn btn-coral" href="#">
+                            <span>смотреть все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- work-area-end -->
+
+
+
+
+
+
+</main>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock %}

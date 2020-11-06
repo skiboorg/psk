@@ -1,0 +1,528 @@
+{% extends  'basic.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - Статья
+{% endblock %}
+
+{% block keywords %}
+    {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+  <main>
+    <!-- slider start -->
+    <div class="hero-slider-area">
+        <div id="rs_slider_wrapper_02" class="rev_slider_wrapper fullwidthbanner-container" data-alias="home-02"
+             data-source="gallery"
+             style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+            <!-- START REVOLUTION SLIDER 5.4.7 fullwidth mode -->
+            <div id="rs_slider_02" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7">
+                <ul>
+
+                    {% for slide in allBanners %}
+                    <li data-index="rs-02" data-transition="random" data-slotamount="default" data-hideafterloop="0"
+                        data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default"
+                        data-thumb="{{ slide.image.url }}" data-rotate="0" data-saveperformance="off" data-title="Slide"
+                        data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                        data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{ slide.image.url }}" alt="" data-bgposition="center center" data-bgfit="cover"
+                             data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption rev_group" id="rs-layer-01-1" data-x="['left','left','left','left']"
+                             data-hoffset="['370','80','97','20']" data-y="['top','top','top','top']"
+                             data-voffset="['250','220','226','200']" data-width="['800', '800', '800', '800']"
+                             data-height="['220','220','220','100']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on"
+                             data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]"
+                             data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']"
+                             data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                             data-paddingleft="[0,0,0,0]"
+                             style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #222; letter-spacing: 0px;">
+
+                            <div class="tp-caption" id="rs-layer-03-1" data-x="['left','left','left','left']"
+                                 data-hoffset="['-10','-10','-10','-10']" data-y="['middle','middle','middle','middle']"
+                                 data-voffset="['-100','-90','-90','-100']" data-width="none" data-height="none" data-whitespace="nowrap"
+                                 data-type="text" data-responsive_offset="on" data-start="800"
+                                 data-frames='[{"delay":"+0","speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                 data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[5,5,5,5]" data-paddingright="[10,10,10,10]" data-paddingbottom="[5,5,5,5]"
+                                 data-paddingleft="[10,10,10,10]" data-fontsize="['16', '17', '17', '16']"
+                                 data-lineheight="['26', '26', '26', '26']"
+                                 style="z-index: 9; white-space: nowrap; font-size: 16px; line-height: 30px; color: #05103b;font-family:'Roboto', sans-serif;font-weight: 700;text-transform: uppercase;border-radius: 5px;">
+                                {{ slide.smallText }}
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption NotGeneric-Title  tp-resizeme" id="rs-layer-02-1" data-x="['left','left','left','left']"
+                                 data-hoffset="['-2','-2','-2','-2']" data-y="['middle','middle','middle','middle']"
+                                 data-voffset="['30','20','10','-20']" data-width="['850', '820', '600', '400']" data-height="none"
+                                 data-whitespace="normal" data-type="text" data-responsive_offset="on"
+                                 data-transform_in="x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                 data-transform_out="s:700;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-start="500" data-splitin="none" data-splitout="none"
+                                 data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]"
+                                 data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']"
+                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                 data-paddingleft="[0,0,0,0]" data-fontsize="['50', '50', '50', '40']"
+                                 data-lineheight="['50', '50', '65', '50']"
+                                 style="z-index: 7;white-space: normal; font-size: 75px; line-height: 60px; font-weight: 700; color: #05103b; letter-spacing: 0px;font-family:'Roboto', sans-serif;">
+                                {{ slide.bigText }}
+                            </div>
+                            <!-- LAYER NR. 3 -->
+                        </div>
+                        <!-- LAYER NR. 1 -->
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption  " id="rs-layer-04-1" data-x="['left','left','left','left']"
+                             data-hoffset="['375','80','101','20']" data-y="['middle','middle','middle','middle']"
+                             data-voffset="['160','100','100','40']" data-width="450" data-height="none" data-whitespace="normal"
+                             data-type="text" data-responsive_offset="on" data-responsive="off"
+                             data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                             data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                             data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                             style="z-index: 5; white-space: normal; font-size: 20px; line-height: 22px; font-weight: 400; color: #444; letter-spacing: 0px;font-family:'Roboto', sans-serif;">
+                            <div class="bd-slider-button">
+                                <a class="b-btn btn-coral" href="#"> <span>{{ slide.buttonText }}</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+
+
+                </ul>
+                <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- slider end -->
+
+    <!-- brand-area-start -->
+    <div class="brand-area pt-130">
+        <div class="container">
+            <div class="section-title coral-section mr-40 mb-30">
+                <!-- <span>кто мы</span> -->
+                <h3 style="text-align: center;margin-bottom: 60px;">Среди наших постоянных клиентов</h3>
+            </div>
+            <div class="brand-border pb-130">
+                <div class="row brand-active">
+                    {% for client in allClients %}
+                     <div class="col-xl-12">
+                        <div class="brand-img text-center">
+                            <img src="{{ client.image.url }}" alt="" />
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- brand-area-end -->
+
+    <!-- features-area-start -->
+    <div class="features-area pb-100 pt-125">
+        <div class="container">
+            <div class="row pb-50">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="section-title coral-section mr-40 mb-30">
+                        <span>кто мы</span>
+                        <h3>Почему клиенты выбирают ПСК УРАЛ</h3>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7">
+                    <div class="features-info mb-30">
+                        <p>пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал, пск урал</p>
+                        <a href="#">подробнее<i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-02-wrapper services-03-wrapper mb-30">
+                        <div class="services-03-icon f-left">
+                            <i class="flaticon-hammer"></i>
+                        </div>
+                        <div class="services-02-text">
+                            <h3>Опытные
+                                рабочие</h3>
+                            <p>короткое описание</p>
+                            <a href="#">подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-02-wrapper services-03-wrapper mb-30">
+                        <div class="services-03-icon f-left">
+                            <i class="flaticon-roller"></i>
+                        </div>
+                        <div class="services-02-text">
+                            <h3>Красивый
+                                внешний вид</h3>
+                            <p>короткое описание</p>
+                            <a href="#">подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="services-02-wrapper services-03-wrapper mb-30">
+                        <div class="services-03-icon f-left">
+                            <i class="flaticon-address"></i>
+                        </div>
+                        <div class="services-02-text">
+                            <h3>Дизайн-проект
+                                бесплатно</h3>
+                            <p>короткое описание</p>
+                            <a href="#">подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- features-area-end -->
+
+    <!-- services-title-area-start -->
+
+    <!-- services-title-area-end -->
+
+    <!-- services-area start  -->
+    <div class="our-services-area pb-45">
+        <div class="container">
+            <div class="section-title coral-section mr-40 mb-30">
+                <!-- <span>кто мы</span> -->
+                <h3 style="text-align: center;margin-bottom: 30px;">Наши услуги</h3>
+            </div>
+            <div class="row">
+                {% for service in indexSevices %}
+                 <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="our-services-wrapper mb-140">
+                        <div class="our-services-img">
+                            <img src="{{ service.image.url }}" alt="">
+                            <div class="our-services-content">
+                                <h3>{{ service.name }}</h3>
+                                <p>{{ service.short_description }}</p>
+                                <div class="our-services-btn">
+                                    <a class="b-btn btn-gray" href="{% url 'service' service.nameSlug %}">
+                                        <span>подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- services-area start  -->
+
+    <!-- about-us-area-start -->
+    <div class="about-us-area pb-155">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 mb-30">
+                    <div class="about-us-img pos-rel">
+                        <img src="{% static 'assets/img/services/01.jpg' %}" alt="">
+                        <div class="about-us-2-img">
+                             <img src="{% static 'assets/img/services/01.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 mb-30">
+                    <div class="about-us-wrapper">
+                        <div class="section-title coral-section">
+
+                            <h3>Наши достижения</h3>
+                            <p>Мы работаем во многих регионах РФ. Нашими заказчиками являются такие федеральные сети, как Красное и Белое, Магнит, Аптеки Фармленд, Zenden.</p>
+                        </div>
+                        <div class="row mt-40">
+                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                                <div class="single-counter">
+                                    <div class="counter-3-icon f-left">
+                                        <i class="fal fa-calendar"></i>
+                                    </div>
+                                    <div class="counter-3-text">
+                                        <h3>4</h3>
+                                        <p>Года на рынке</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                                <div class="single-counter">
+                                    <div class="counter-3-icon f-left">
+                                        <i class="flaticon-address"></i>
+                                    </div>
+                                    <div class="counter-3-text">
+                                        <h3>2 037</h3>
+                                        <p>Реализованных проектов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                                <div class="single-counter">
+                                    <div class="counter-3-icon f-left">
+                                        <i class="flaticon-hammer"></i>
+                                    </div>
+                                    <div class="counter-3-text">
+                                        <h3>104</h3>
+                                        <p>Профессионалов</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fea-btn mt-30">
+                            <a class="b-btn btn-coral" href="#">
+                                <span>подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about-us-area-end -->
+
+    <!-- testimonial-area -->
+    <div class="client-area black-bg pt-125 pb-130" style="background-image:url({% static 'assets/img/bg/bg-8.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                    <div class="section-title white-title text-center mb-70">
+                        <!-- <span>what our clients say</span> -->
+                        <h3 style="color: #fff;">Благодарственные письма</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-gallery">
+                <ul id="lightgallery" class="list-unstyled row">
+                    {% for review in allReviews %}
+                    <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ review.image.url }}" data-sub-html="Описание">
+                        <a href="">
+                            <img class="img-responsive" src="{{ review.image.url }}" alt="">
+                        </a>
+                    </li>
+                    {% endfor %}
+
+
+
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="work-button mt-30 text-center">
+                        <a class="b-btn btn-coral" href="#">
+                            <span>смотреть все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial-area end -->
+
+    <!-- work-area-start -->
+    <div class="work-area work-02 pt-125 pb-125 pl-55 pr-55">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 offset-lg-2 offset-xl-2">
+                    <div class="section-title text-center mb-70">
+                        <!-- <span>our Latest Works</span> -->
+                        <h1>ВЫПОЛНЕННЫЕ ОБЪЕКТЫ КОМПАНИИ<br> ПСК УРАЛ</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row text-center">
+                {% for project in allProjects %}
+                 <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="b-work position-relative mb-30" style="background: url({{ project.image.url }}); height: 340px; background-size: cover">
+                        <!--<div class="b-work-img">-->
+                        <!--<img src="assets/img/new/w1.jpeg" alt="">-->
+                        <!--</div>-->
+                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
+                            <div class="inner-work-2">
+                                <h2><a href="#">{{ project.customer }}</a></h2>
+                                <p>{{ project.short_description }}</p>
+                                <div class="b-work-link">
+                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+
+               
+
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="work-button mt-30 text-center">
+                        <a class="b-btn btn-coral" href="#">
+                            <span>смотреть все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- work-area-end -->
+
+    <!-- team-area-start -->
+    <div class="team-area pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                    <div class="section-title section-margin text-center mb-75">
+                        <!-- <span>expert engineer</span> -->
+                        <h1>Наша команда</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                    <div class="team-wrapper text-center">
+                        <div class="team-img pos-rel">
+                            <img src="{% static 'assets/img/team/01.jpg' %}" alt="">
+
+                        </div>
+                        <div class="team-text">
+                            <h3>Иван Иванов</h3>
+                            <span>инженер</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                    <div class="team-wrapper text-center">
+                        <div class="team-img pos-rel">
+                             <img src="{% static 'assets/img/team/01.jpg' %}" alt="">
+                        </div>
+                        <div class="team-text">
+                            <h3>Иван Иванов</h3>
+                            <span>инженер</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                    <div class="team-wrapper text-center">
+                        <div class="team-img pos-rel">
+                            <img src="{% static 'assets/img/team/01.jpg' %}" alt="">
+                        </div>
+                        <div class="team-text">
+                            <h3>Иван Иванов</h3>
+                            <span>инженер</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                    <div class="team-wrapper text-center">
+                        <div class="team-img pos-rel">
+                             <img src="{% static 'assets/img/team/01.jpg' %}" alt="">
+                        </div>
+                        <div class="team-text">
+                            <h3>Иван Иванов</h3>
+                            <span>инженер</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- team-area-end -->
+
+    <!-- blog-area-start -->
+    <div class="blog-area blog-bg pos-rel">
+        <div class="blog-bg-img d-none d-md-block" style="background-image:url({% static 'assets/img/bg/video-02.jpg' %})">
+            <div class="play-video-icon">
+                <a class="popup-video play-btn-style" href="https://www.youtube.com/watch?v=LTXD6XZXc3U"><i class="fal fa-play"></i></a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6">
+                <div class="blog-box pt-125 pb-110 pl-100 pr-150">
+                    <div class="section-title mb-60">
+                        <!-- <span>articles & tips</span> -->
+                        <h3>Последние статьи</h3>
+                    </div>
+                    {% for post in latestPosts %}
+                    <div class="single-blog single-02-blog mb-20">
+                        <div class="blog-text">
+                            <div class="blog-meta">
+                                <span> <i class="far fa-calendar-alt"></i> {{ post.created_at |date }}</span>
+                                <!-- <span> <a href="blog-details.html"><i class="far fa-comment"></i> Comments (03)</a></span> -->
+                            </div>
+                            <h4><a href="blog-details.html">{{ post.name }}</a></h4>
+                            <a href="blog-details.html">подробнее<i class="dripicons-arrow-thin-right"></i></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog-area-end -->
+
+    <!-- contact-area-start -->
+    <div class="contact-area pt-130 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 mb-30">
+                    <div class="map-wrapper mb-30">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af68d138e6127596740839f7e3622cd3b9c1dbbf3c6c1a664b13a708ee6749b36&amp;width=470&amp;height=470&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 mb-30">
+                    <div class="appointment-wrapper ml-50">
+                        <div class="section-title mb-40">
+                            <span>остались вопросы?</span>
+                            <h1>Напишите нам</h1>
+                        </div>
+                        {% include 'pages/_form.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact-area-end -->
+    <!-- brand-area-start -->
+
+</main>
+
+
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <!-- Slider Revolution core JavaScript files -->
+<script type="text/javascript" src="{% static 'assets/rs/js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/rs/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'assets/rs/js/revolution-active.js' %}"></script>
+{% endblock %}

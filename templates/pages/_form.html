@@ -1,0 +1,30 @@
+<form id="appointment-form" action="{% url 'callback' %}" method="post">{% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-box user-icon mb-10">
+                                        <input type="text" name="{{ form.name.name }}" placeholder="Ваше имя">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-box phone-icon mb-10">
+                                        <input type="text" name="{{ form.phone.name }}" placeholder="Ваш телефон">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-box email-icon mb-10">
+                                        <input type="text" name="{{ form.email.name }}" placeholder="Ваш Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-box message-icon mb-10">
+                                        <textarea name="{{ form.message.name }}" id="message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                                    </div>
+                                    <input style="display: none" type="text" name="age" value="">
+                        <input style="display: none" type="checkbox" name="agree">
+                        <textarea style="display: none"  name="messages" ></textarea>
+                                    <div class="appointment-button">
+                                        <button type="submit" class="b-btn btn-coral"><span>отправить</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>

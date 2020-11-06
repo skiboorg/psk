@@ -1,0 +1,745 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .coral-menu .header-right-info {
+        margin-left: 30px;
+    }
+    .arrow-style .slick-arrow {
+        left: -74px;;
+    }
+    .arrow-style .slick-next {
+        right: -74px;
+        left: auto;
+    }
+    .work-02{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .blog-box {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .choose-box {
+        margin-left: 26px;
+        margin-right: 20px;}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .header-top-area {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header-info span {
+        margin-right: 14px;
+    }
+    .single-history {
+        margin-right: 0;
+    }
+    .history-text h1 {
+        font-size: 36px;
+    }
+    .main-menu-area {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .features-text {
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 22px 20px 24px 20px;
+    }
+    .counter-bg {
+        padding-left: 40px;
+    }
+    .arrow-style .slick-arrow {
+        left: -30px;
+    }
+    .arrow-style .slick-next {
+        right: -30px;
+        left: auto;
+    }
+    .blog-text {
+        padding: 40px 20px 33px;
+    }
+    .blog-meta > span {
+        margin-right: 20px;
+    }
+    .footer-icon a {
+        height: 48px;
+        width: 48px;
+        line-height: 48px;
+        margin-right: 2px;
+    }
+.footer-wrapper{
+    padding-left: 0;
+}
+.inner-work-2 {
+	padding: 14px;
+	padding-top: 16px;
+}
+.b-work-content-2 {
+	padding: 20px;
+	padding-bottom: 40px;
+}
+.choose-text p {
+	margin-right: 0;
+}
+.newsletter-text h1 {
+	font-size: 38px;
+}
+.section-title h1 {
+	font-size: 34px;
+}
+.counter-wrapper-2 {
+	padding: 70px 30px;
+}
+.services-bg {
+	margin-left: 0;
+	margin-top: 30px;
+}
+.services-02-text p {
+	margin-right: 0;
+}
+.counter-3-icon {
+	margin-right: 11px;
+}
+.work-tab li a {
+	padding: 53px 13px;
+}
+.clients-02-wrapper {                   
+	padding: 61px 28px 44px;
+}
+.client-02-active .slick-prev {
+	left: 40%;
+}
+.subscribe-wrapper {
+	padding: 68px 18px 73px;
+}
+.sub-button button.btn {
+	padding: 21px 71px;
+}
+.sub-address-wrapper {
+	padding: 68px 30px;
+}
+.work-02{
+    padding-left: 0;
+    padding-right: 0;
+}
+.services-03-wrapper .services-02-text p {
+	margin-right: 0;
+}
+.services-03-wrapper .services-02-text h3 {
+	font-size: 20px;
+}
+.about-us-wrapper {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+.team-text h3 {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.blog-box{
+    padding-left: 20px;
+    padding-right: 0;
+}
+.appointment-wrapper {
+	margin-left: 0;
+}
+.about-us-2-img {
+	bottom: 30px;
+	left: 30px;
+}
+.home1-right-info{display: none;}
+.main-menu nav > ul > li {
+	margin-left: 30px;
+}
+.main-menu nav > ul > li {
+	margin-left: 25px;
+}
+.header-button {
+	margin-left: 13px;
+}
+.header-button button.b-btn {
+	padding: 22px 30px;
+}
+.header-3-info span {
+	padding: 23px 15px;
+}
+.header-2-icon {
+	padding: 21px 14px;
+}
+.about-section {
+    margin-right: 0;
+    margin-top:0;
+}
+.history-icon-text p {
+	margin-right: 0;
+}
+.skill-wrapper {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+h4.progress-h4 {
+	font-size: 20px;
+}
+.choose-box {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.about-quote-wrqpper {
+	padding: 23px 32px 28px;
+	margin-right: 0;
+}
+.services-03-icon {
+	margin-right: 22px;
+}
+.our-services-content {
+	margin-left: 70px;
+	padding: 48px 30px 50px 30px;
+}
+
+
+
+
+
+
+
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer-wrapper{
+        padding-left: 0;
+    }
+    .mail-header-icon{display: none;}
+    .header-top-area {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .main-menu-area {
+        padding: 16px 15px 2px;
+    }
+    .counter-bg-img {
+        background-size: cover;
+        height: 500px;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        background-position: center center;
+    }
+    .counter-bg {
+        padding-left: 50px;
+    }
+    .arrow-style .slick-next {
+        right: 0;
+        left: auto;
+    }
+    .arrow-style .slick-arrow {
+        left: 0;
+    }
+    .cta-text h1 {
+        font-size: 40px;
+    }
+    .cta-text p {
+        padding-right: 0;
+        margin: 0;
+    }
+    .blog-text {
+        padding: 40px 15px 33px;
+    }
+    .blog-text h4 {
+        font-size: 18px;
+    }
+    .single-history {
+        margin-right: 0;
+    }    
+    .b-video h2 {
+        font-size: 44px;
+    }
+    .choose-text p {
+        margin-right: 0;
+    }
+    .footer-bottom-wrapper {
+        margin-top: 10px;
+    }
+    .footer-bottom-link {
+        float: left;
+    }
+    .services-bg {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .services-02-text p {
+        margin-right: 0;
+    }
+    .clients-02-margin{
+        margin-top: 0;
+    }
+    .clients-02-wrapper {
+        padding: 61px 40px 44px;
+    }
+    .clients-02-wrapper .client-img::after {
+        right: 245px;
+    }
+    .section-margin {
+        margin-bottom: 72px;
+    }
+    .section-margin {
+        margin-bottom: 72px;
+    }
+    .subscribe-wrapper {
+        padding: 68px 30px 73px;
+    }
+    .sub-address-wrapper {
+        padding: 68px 30px;
+    }
+    .clients-03-img img {
+        width: 100%;
+    }
+    .work-02{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-us-wrapper {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .team-text h3 {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+    .blog-box{
+        padding-left: 20px;
+        padding-right: 0;
+    }
+    .about-us-area{
+        padding-bottom: 100px;
+    }
+    .about-us-2-img {
+        bottom: 30px;
+        left: 30px;
+    }
+    .blog-bg-img{
+        background-size: cover;
+        height: 500px;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        background-position: center center;
+    }
+    .about-section {
+        margin-right: 0;
+        margin-top:0;
+    }
+    .history-icon-text p {
+        margin-right: 0;
+    }
+    .skills-bg-img {
+        height: 400px;
+        position: static;
+        width: 100%;
+        background-position: top center;
+    }
+    .skills-bg-img-right {
+        height: 100%;
+        width: 100%;
+        float: none;
+    }
+    .skill-wrapper {
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .choose-bg-img {
+        background-size: cover;
+        height: 500px;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        background-position: center center;
+    }
+    .choose-box {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .about-quote-wrqpper {
+        padding: 23px 32px 28px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .section-title h1 {
+        font-size: 32px;
+    }
+    .our-services-content {
+        margin-left: 30px;
+        padding: 20px 20px 30px 20px;
+    }
+    .our-services-content h3 {
+        font-size: 22px;
+    }
+    .work-tap-icon {
+        float: none;
+        margin-right: 0;
+    }
+    .work-tab li a {
+        padding: 40px 10px;
+    }
+    .work-tap-text h4 {
+        font-size: 16px;
+        margin-top:6px;
+    }
+    .header-middle-area {
+        border-bottom: none;
+        padding: 20px 0;
+        padding-bottom: 6px;
+    }
+    .appointment-wrapper {
+        margin-left: 0;
+    }
+    .breadcrumb-area {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+    .breadcrumb-text > h1 {
+        font-size: 50px;
+    }
+
+
+
+
+
+}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    .footer-wrapper{
+        padding-left: 0;
+    }
+    .about-section {
+        margin-right: 0;
+        margin-top:0;
+    }
+    .mail-header-icon{display: none;}
+    .header-top-area {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .single-history {
+        background: #febc35;
+        padding: 40px 15px;
+        margin-right: 0;
+    }
+    .main-menu-area {
+        padding: 60px 0 2px;
+    }
+    .history-text h1 {
+        font-size: 30px;
+    }
+    .features-text {
+        margin-right: 15px;
+        margin-left: 15px;
+        padding: 22px 15px 24px 15px;
+    }
+    .counter-bg {
+        padding-left: 30px;
+    }
+    .latest-services-text {
+        position: static;
+        top: 0;
+        right: 0;
+        background: #febc35;
+        width: 100%;
+        padding: 47px 30px 60px 30px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(0);
+    }
+    .cta-text h1 {
+        font-size: 30px;
+    }
+    .cta-text p {
+        padding-right: 0;
+    }
+    .section-title h1 {
+        font-size: 30px;
+    }
+    .testimonial-item > p {
+        font-size: 22px;
+    }
+    .footer-icon {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+    .footer-top-link{
+        padding-bottom: 15px;
+    }
+    .b-video h2 {
+        font-size: 33px;
+    }
+    .inner-work-2 {
+        padding: 14px;
+        padding-top: 16px;
+    }
+    .b-work-content-2 {
+        padding: 20px;
+        padding-bottom: 36px;
+    }
+    .client-wrapper {
+        padding: 48px 25px 31px;
+    }
+    .single-blog .blog-text {
+        padding: 48px 23px 33px;
+    }
+    .newsletter-text h1 {
+        font-size: 30px;
+    }
+    .section-title {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .choose-icon {
+        margin-right: 22px;
+    }
+    .choose-text p {
+        margin-right: 0;
+    }
+    .footer-bottom-wrapper {
+        margin-top: 10px;
+    }
+    .footer-2-icon {
+        margin-left: 0;
+        float: none;
+        text-align: center;
+    }
+    .footer-bottom-link {
+        float: none;
+        text-align: center;
+    }
+    .section-margin {
+        margin-bottom: 72px;
+    }
+    .subscribe-wrapper {
+        padding: 68px 15px 73px;
+    }
+    .sub-address-wrapper {
+        padding: 68px 15px;
+    }
+    .services-bg {
+        margin-left: 0;
+    }
+    .services-02-text p {
+        margin-right: 0;
+    }
+    .faq-box .card-body p {
+        margin-right: 0;;
+    }
+    .faq-box .btn-link {
+        padding: 26px 15px;
+    }
+    .faq-box .card-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .faq-box .btn-link::before {
+        right: 15px;
+    }
+    .clients-02-margin{
+        margin-top: 0;
+    }
+    .clients-02-wrapper {
+        padding: 61px 18px 44px;
+    }
+    .clients-02-wrapper .client-img::after {
+        right: 75px;
+    }
+    .sub-button button.btn {
+        padding: 21px 74px;
+    }
+    .clients-03-img img {
+        width: 100%;
+    }
+    .work-02{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-us-wrapper {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .team-text h3 {
+        font-size: 20px;
+    }
+    .appointment-wrapper {
+        margin-left: 0;
+    }
+    .features-info {
+        padding-left: 25px;
+    }
+    .services-03-icon {
+        margin-right: 20px;
+    }
+    .services-03-wrapper .services-02-text p {
+        margin-right: 0;
+    }
+    .services-03-wrapper .services-02-text h3 {
+        font-size: 20px;
+    }
+    .about-us-area{
+        padding-bottom: 100px;
+    }
+    .blog-box {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .single-02-blog {
+        padding: 45px 0;
+    }
+    .skills-bg-img {
+        height: 400px;
+        position: static;
+        width: 100%;
+        background-position: top center;
+    }
+    .skills-bg-img-right {
+        height: 100%;
+        width: 100%;
+        float: none;
+    }
+    .skill-wrapper {
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .skill-wrapper .section-title p {
+        margin-right: 0;
+    }
+    .breadcrumb-text > h1 {
+        font-size: 36px;
+    }
+    .breadcrumb-menu li a {
+        font-size: 20px;
+    }
+    .breadcrumb-menu span {
+        font-size: 20px;
+    }
+    .breadcrumb-menu li::before {
+        top: 2px;
+    }
+    .breadcrumb-area {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .choose-box {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .about-quote-wrqpper {
+        padding: 23px 32px 28px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .our-services-content {
+        margin-left: 30px;
+        padding: 20px 20px 30px 20px;
+    }
+    .our-services-content h3 {
+        font-size: 20px;
+    }
+    .work-tab li a {
+        padding: 15px 10px;
+        border-right: none;
+    }
+    .work-tap-text h4 {
+        font-size: 16px;
+        margin-top:6px;
+    }
+    .work-tab li {
+        float: none;
+        width: 50%;
+    }
+    .work-tab {
+        border-bottom: none;
+    }
+    .work-tab li a::before {
+        display: none;
+    }
+    .work-tap-icon i {
+        font-size: 23px;
+    }
+    .header-middle-area {
+        border-bottom: none;
+        padding: 20px 0;
+        padding-bottom: 6px;
+    }
+    .about-us-2-img {
+        bottom: 20px;
+        left: 20px;
+        border: 8px solid #fff;
+        width: 200px;
+    }
+    .author-img {
+        margin-bottom: 35px;
+        margin-right: 0;
+        float: none;
+        margin-top: 25px;
+    }
+    .author {
+        text-align: center;
+    }
+    .blog-share-icon a {
+        margin-right: 15px;
+    }
+    .case-list li h4 {
+        font-size: 18px;
+    }
+    .case-list i {
+        margin-right: 5px;
+    }
+    .services-details-content p {
+        margin-right: 0;
+    }
+    .ser-title {
+        font-size: 32px;
+    }
+    .servicess-details-text-2 h2 {
+        font-size: 32px;
+    }
+
+
+
+
+
+
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ 
+}

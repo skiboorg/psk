@@ -1,0 +1,158 @@
+{% extends  'basic.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - Статья
+{% endblock %}
+
+{% block keywords %}
+    {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+  <main>
+    <div class="video-bg-area pt-120 pb-120" style="background-image:url({% static 'assets/img/new/page_top_bg_sm.png' %});margin-bottom: 40px">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="b-video">
+
+                        <h2>{{ curService.name }}</h2>
+                        <p style="max-width: 480px;color: #ffffff">{{ curService.short_description }}</p>
+                        <div class="work-button mt-30 ">
+                            <a class="b-btn btn-coral" href="#">
+                                <span>Заказать</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-xl-6 text-right">
+                      <img src="{{ curService.image.url }}" alt="">
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h3 class="mb-30">Подробное описание услуги</h3>
+        <div class="mb-60">
+            {{ curService.description |safe }}
+        </div>
+        <h3 class="mb-30">Этапы оказания услуги</h3>
+        <div class="steps mb-60">
+            {% for step in curService.steps.all %}
+            <div class="step-item">
+                <p class="step-item__num">{{ step.number }}</p>
+                <p class="step-item__text">{{ step.text }}</p>
+            </div>
+        {% endfor %}
+
+
+
+        </div>
+
+        <h3 class="mb-30">Преимущества</h3>
+        <div class="steps mb-30">
+              {% for step in curService.features.all %}
+            <div class="step-item no-bg">
+                <p class="step-item__num"><img src="{{ step.icon.url }}" alt=""></p>
+                <p class="step-item__text cl-bl">{{ step.text }}</p>
+            </div>
+        {% endfor %}
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- testimonial-area -->
+    <div class="client-area black-bg pt-125 pb-130" style="background-image:url(assets/img/bg/bg-8.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                    <div class="section-title white-title text-center mb-70">
+                        <!-- <span>what our clients say</span> -->
+                        <h3 style="color: #fff;">Благодарственные письма</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-gallery">
+                <ul id="lightgallery" class="list-unstyled row">
+                    {% for review in allReviews %}
+                    <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ review.image.url }}" data-sub-html="Описание">
+                        <a href="">
+                            <img class="img-responsive" src="{{ review.image.url }}" alt="">
+                        </a>
+                    </li>
+                    {% endfor %}
+
+
+
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="work-button mt-30 text-center">
+                        <a class="b-btn btn-coral" href="#">
+                            <span>смотреть все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial-area end -->
+
+    <div class="brand-area pt-130">
+        <div class="container">
+            <div class="section-title coral-section mr-40 mb-30">
+                <!-- <span>кто мы</span> -->
+                <h3 style="text-align: center;margin-bottom: 60px;">Среди наших постоянных клиентов</h3>
+            </div>
+            <div class="brand-border pb-130">
+                <div class="row brand-active">
+                    {% for client in allClients %}
+                     <div class="col-xl-12">
+                        <div class="brand-img text-center">
+                            <img src="{{ client.image.url }}" alt="" />
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</main>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock %}

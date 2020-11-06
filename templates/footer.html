@@ -1,0 +1,90 @@
+{% load static %}
+<!-- footer-area-start -->
+<footer>
+    <div class="footer-widget-area footer-coral blue-bg pt-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-wrapper mb-30">
+                        <div class="footer-2-logo">
+                            <a href="/"><img src="{% static 'assets/img/new/logo.png'%}" alt=""></a>
+                        </div>
+                        <!-- <div class="footer-text footer-2-text">
+                            <p>But I must explain to you how all this mist aken idea of denouncing pleasure and prais ing pain was born</p>
+                            <a href="#">Continue Reading</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-wrapper pl-55 mb-30">
+                        <h3 class="footer-title">О компании</h3>
+                        <div class="footer-link">
+                            <ul>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Благодарственные письма</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6">
+                    <div class="footer-wrapper  mb-30">
+                        <h3 class="footer-title"> Услуги</h3>
+                        <div class="footer-link">
+                            <ul>
+                                <li><a href="#">Услуга 1</a></li>
+                                <li><a href="#">Услуга 2</a></li>
+                                <li><a href="#">Услуга 3</a></li>
+                                <li><a href="#">Услуга 4</a></li>
+                                <li><a href="#">Услуга 1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-wrapper mb-30 pl-40">
+                        <h3 class="footer-title">контакты</h3>
+                        <ul class="footer-info">
+                            <li><span><i class="far fa-map-marker-alt"></i> г. Челябинск, ул. Механическая 101, офис 17, 18, 20</span></li>
+                            <li><span><i class="far fa-envelope-open"></i> pskural@bk.ru</span></li>
+                            <li><span><i class="far fa-calendar"></i> ПН-ПТ 09:00 - 18:00 СБ-ВС выходной</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area mt-40 pb-25">
+            <div class="container">
+                <div class="footer-bottom-border pt-25">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="copyright text-center col-md-left">
+                                <p><i class="far fa-copyright"></i> 2020 <a href="#">ПСК УРАЛ</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <div class="appointment-wrapper ">
+                        <div class="section-title mb-40">
+                            <span>остались вопросы?</span>
+                            <h1>Напишите нам</h1>
+                        </div>
+                       {% include 'pages/_form.html' %}
+                    </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- footer-area-end -->
