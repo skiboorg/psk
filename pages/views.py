@@ -79,7 +79,7 @@ def projects(request):
         pageDescription = 'НЕ ЗАПОЛНЕНА ТАБЛИЦА СЕО ТЕГИ'
         pageKeywords = 'НЕ ЗАПОЛНЕНА ТАБЛИЦА СЕО ТЕГИ'
     allSevices = Service.objects.all()
-    allProjects = Project.objects.all()
+    allReviews = Review.objects.filter(is_home=True)
     allReviews = Review.objects.all()
     allClients = Client.objects.all()
     projectsActive = 'active'
@@ -114,7 +114,7 @@ def services(request):
         pageKeywords = 'НЕ ЗАПОЛНЕНА ТАБЛИЦА СЕО ТЕГИ'
     allSevices = Service.objects.all()
     servicesActive = 'active'
-    allReviews = Review.objects.all()
+    allReviews = Review.objects.filter(is_home=True)
     return render(request, 'pages/services.html', locals())
 
 
@@ -138,7 +138,7 @@ def contacts(request):
 def service(request, slug):
     form = CallbackForm()
     allSevices = Service.objects.all()
-    allReviews = Review.objects.all()
+    allReviews = Review.objects.filter(is_home=True)
     allClients = Client.objects.all()
     curService = get_object_or_404(Service, nameSlug=slug)
     servicesActive = 'active'

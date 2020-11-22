@@ -253,7 +253,9 @@
                         <div class="section-title coral-section">
 
                             <h3>Наши достижения</h3>
-                            <p>Мы работаем во многих регионах РФ. Нашими заказчиками являются такие федеральные сети, как Красное и Белое, Магнит, Аптеки Фармленд, Zenden.</p>
+                            <p>Мы работаем во многих регионах РФ. Нашими постоянными заказчиками являются такие
+                                федеральные сети, как Красное и Белое, Магнит, Аптеки Фармленд, Zenden, DNS, Технопоинт,
+                            Пятерочка.</p>
                         </div>
                         <div class="row mt-40">
                             <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
@@ -262,8 +264,8 @@
                                         <i class="fal fa-calendar"></i>
                                     </div>
                                     <div class="counter-3-text">
-                                        <h3>4</h3>
-                                        <p>Года на рынке</p>
+                                        <h3>5</h3>
+                                        <p>Лет на рынке</p>
                                     </div>
                                 </div>
                             </div>
@@ -291,7 +293,7 @@
                             </div>
                         </div>
                         <div class="fea-btn mt-30">
-                            <a class="b-btn btn-coral" href="#">
+                            <a class="b-btn btn-coral" href="{% url 'about' %}">
                                 <span>подробнее</span>
                             </a>
                         </div>
@@ -360,15 +362,17 @@
                         <!--<div class="b-work-img">-->
                         <!--<img src="assets/img/new/w1.jpeg" alt="">-->
                         <!--</div>-->
-                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
-                            <div class="inner-work-2">
-                                <h2><a href="#">{{ project.customer }}</a></h2>
-                                <p>{{ project.short_description }}</p>
-                                <div class="b-work-link">
-                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                         <p style="position: absolute;bottom: 10px;left: 10px"><a style="color: #ffffff;font-weight: bold" href="/">{{ project.name }}</a></p>
+{#                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">#}
+{##}
+{#                            <div class="inner-work-2">#}
+{#                                <h2><a href="#">{{ project.customer }}</a></h2>#}
+{#                                <p>{{ project.short_description }}</p>#}
+{#                                <div class="b-work-link">#}
+{#                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
                     </div>
                 </div>
                 {% endfor %}
