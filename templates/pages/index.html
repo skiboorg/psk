@@ -63,12 +63,12 @@
                                  data-paddingtop="[5,5,5,5]" data-paddingright="[10,10,10,10]" data-paddingbottom="[5,5,5,5]"
                                  data-paddingleft="[10,10,10,10]" data-fontsize="['16', '17', '17', '16']"
                                  data-lineheight="['26', '26', '26', '26']"
-                                 style="z-index: 9; white-space: nowrap; font-size: 16px; line-height: 30px; color: #05103b;font-family:'Roboto', sans-serif;font-weight: 700;text-transform: uppercase;border-radius: 5px;">
+                                 style="z-index: 9; white-space: nowrap; font-size: 16px; line-height: 30px; color: #ffffff;font-family:'Roboto', sans-serif;font-weight: 700;text-transform: uppercase;border-radius: 5px;">
                                 {{ slide.smallText }}
                             </div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption NotGeneric-Title  tp-resizeme" id="rs-layer-02-1" data-x="['left','left','left','left']"
+                            <div  class="tp-caption NotGeneric-Title  tp-resizeme" id="rs-layer-02-1" data-x="['left','left','left','left']"
                                  data-hoffset="['-2','-2','-2','-2']" data-y="['middle','middle','middle','middle']"
                                  data-voffset="['30','20','10','-20']" data-width="['850', '820', '600', '400']" data-height="none"
                                  data-whitespace="normal" data-type="text" data-responsive_offset="on"
@@ -80,7 +80,7 @@
                                  data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                  data-paddingleft="[0,0,0,0]" data-fontsize="['50', '50', '50', '40']"
                                  data-lineheight="['50', '50', '65', '50']"
-                                 style="z-index: 7;white-space: normal; font-size: 75px; line-height: 60px; font-weight: 700; color: #05103b; letter-spacing: 0px;font-family:'Roboto', sans-serif;">
+                                 style="z-index: 7;white-space: normal; font-size: 75px; line-height: 60px; font-weight: 700; color: #ffffff; letter-spacing: 0px;font-family:'Roboto', sans-serif;">
                                 {{ slide.bigText }}
                             </div>
                             <!-- LAYER NR. 3 -->
@@ -358,11 +358,12 @@
             <div class="row text-center">
                 {% for project in allProjects %}
                  <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="b-work position-relative mb-30" style="background: url({{ project.image.url }}); height: 340px; background-size: cover">
+                     <a href="/">
+                                <div class="b-work position-relative mb-30" style="background: url({{ project.image.url }}); height: 340px; background-size: cover">
                         <!--<div class="b-work-img">-->
                         <!--<img src="assets/img/new/w1.jpeg" alt="">-->
                         <!--</div>-->
-                         <p style="position: absolute;bottom: 10px;left: 10px;right: 10px;background: #00000063;}"><a style="color: #ffffff;font-weight: bold" href="/">{{ project.name }}</a></p>
+                         <p style="color: #ffffff;font-weight: bold;position: absolute;bottom: 45%;left: 10px;right: 10px;background: #00000063;">{{ project.name }}</p>
 {#                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">#}
 {##}
 {#                            <div class="inner-work-2">#}
@@ -374,6 +375,8 @@
 {#                            </div>#}
 {#                        </div>#}
                     </div>
+                     </a>
+
                 </div>
                 {% endfor %}
                 
