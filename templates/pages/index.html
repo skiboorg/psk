@@ -52,7 +52,7 @@
                              data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                              data-paddingleft="[0,0,0,0]"
                              style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #222; letter-spacing: 0px;">
-
+                            {% if slide.smallText %}
                             <div class="tp-caption" id="rs-layer-03-1" data-x="['left','left','left','left']"
                                  data-hoffset="['-10','-10','-10','-10']" data-y="['middle','middle','middle','middle']"
                                  data-voffset="['-100','-90','-90','-100']" data-width="none" data-height="none" data-whitespace="nowrap"
@@ -66,6 +66,7 @@
                                  style="z-index: 9; white-space: nowrap; font-size: 16px; line-height: 30px; color: #ffffff;font-family:'Roboto', sans-serif;font-weight: 700;text-transform: uppercase;border-radius: 5px;">
                                 {{ slide.smallText }}
                             </div>
+                            {% endif %}
 
                             <!-- LAYER NR. 2 -->
                             <div  class="tp-caption NotGeneric-Title  tp-resizeme" id="rs-layer-02-1" data-x="['left','left','left','left']"
@@ -96,9 +97,11 @@
                              data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                              data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                              style="z-index: 5; white-space: normal; font-size: 20px; line-height: 22px; font-weight: 400; color: #444; letter-spacing: 0px;font-family:'Roboto', sans-serif;">
+                            {% if slide.buttonText %}
                             <div class="bd-slider-button">
-                                <a class="b-btn btn-coral" href="#"> <span>{{ slide.buttonText }}</span></a>
+                                <a class="b-btn btn-coral" href="{{ slide.buttonUrl }}"> <span>{{ slide.buttonText }}</span></a>
                             </div>
+                            {% endif %}
                         </div>
                     </li>
                     {% endfor %}
