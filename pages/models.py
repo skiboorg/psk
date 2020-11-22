@@ -62,11 +62,11 @@ class BlogPost(models.Model):
 
 class Banner(models.Model):
     order = models.IntegerField('Номер по порядку', default=1)
-    bigText = models.CharField('Заголовок на баннере (70 символов)', max_length=70, blank=False, null=True)
-    smallText = models.CharField('Описание на баннере (200 символов)', max_length=200, blank=False, null=True)
+    bigText = models.CharField('Заголовок на баннере (70 символов)', max_length=70, blank=True, null=True)
+    smallText = models.CharField('Описание на баннере (200 символов)', max_length=200, blank=True, null=True)
     image = models.ImageField('Картинка для баннера (1920 x 660)', upload_to='slides/', blank=True, null=True)
-    buttonText = models.CharField('Надпись на первой кнопке', max_length=10, blank=False, null=True)
-    buttonUrl = models.CharField('Ссылка с кнопки', max_length=100, blank=False, null=True)
+    buttonText = models.CharField('Надпись на первой кнопке', max_length=10, blank=True, null=True)
+    buttonUrl = models.CharField('Ссылка с кнопки', max_length=100, blank=True, null=True)
     isActive = models.BooleanField('Отображать ?', default=True)
 
     def __str__(self):
