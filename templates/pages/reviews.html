@@ -1,0 +1,75 @@
+{% extends  'basic.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - Статья
+{% endblock %}
+
+{% block keywords %}
+    {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+  <main>
+    <div class="video-bg-area pt-120 pb-120" style="background-image:url({% static 'assets/img/new/page_top_bg_sm.png' %})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="b-video">
+
+                                <h2>Благодарственные письма</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+    <!-- testimonial-area -->
+    <div class="client-area black-bg pt-125 pb-130" >
+        <div class="container">
+
+             <div class="demo-gallery">
+                <ul id="lightgallery" class="list-unstyled row">
+                    {% for review in allReviews %}
+                    <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ review.image.url }}" data-sub-html="Описание">
+                        <a href="">
+                            <img class="img-responsive" src="{{ review.image.url }}" alt="">
+                        </a>
+                    </li>
+                    {% endfor %}
+
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- testimonial-area end -->
+
+
+
+
+
+
+
+</main>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock %}

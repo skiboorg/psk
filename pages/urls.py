@@ -10,6 +10,7 @@ urlpatterns = [
     path('index.php', RedirectView.as_view(url='/', permanent=False), name='index2'),
     path('services/', views.services, name='services'),
     path('about/', views.about, name='about'),
+    path('reviews/', views.reviews, name='reviews'),
     path('services/<slug>/', views.service, name='service'),
     path('blog/', views.posts, name='posts'),
     path('blog/<slug>/', views.post, name='post'),

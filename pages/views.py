@@ -48,6 +48,9 @@ def index(request):
     return render(request, 'pages/index.html', locals())
 
 
+def reviews(request):
+    allReviews = Review.objects.all()
+    return render(request, 'pages/reviews.html', locals())
 def about(request):
     allSevices = Service.objects.filter(isHomeVisible=True)
 
