@@ -80,7 +80,7 @@ def projects(request):
         pageKeywords = 'НЕ ЗАПОЛНЕНА ТАБЛИЦА СЕО ТЕГИ'
     allSevices = Service.objects.all()
     allReviews = Review.objects.filter(is_home=True)
-    allReviews = Review.objects.all()
+    allProjects = Project.objects.all()
     allClients = Client.objects.all()
     projectsActive = 'active'
     return render(request, 'pages/projects.html', locals())
