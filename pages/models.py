@@ -80,8 +80,8 @@ class Banner(models.Model):
 
 class Service(models.Model):
     name = models.CharField('Название услуги', max_length=255, blank=False, null=True)
-    short_description = models.TextField('Краткое описание (380 символов)', blank=False, null=True)
-    description = RichTextUploadingField('Полное описание услуги', blank=False, null=True)
+    short_description = models.TextField('Краткое описание (380 символов)', blank=True, null=True)
+    description = RichTextUploadingField('Полное описание услуги', blank=True, null=True)
     isHomeVisible = models.BooleanField('Отображать на главной?', default=True, db_index=True)
     nameSlug = models.CharField(max_length=255, blank=True, null=True, editable=False)
     image = models.ImageField('Изображение превью (360 x 240)', upload_to='service_img/', blank=False)

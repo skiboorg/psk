@@ -56,7 +56,7 @@
                 <p style="text-align: center">ДО</p>
 
                 <div class="demo-gallery">
-                    <ul id="lightgallery" class="list-unstyled row">
+                    <ul  class="lightgallery list-unstyled row">
                         {% for img in address.projectimage_set.all %}
                             {%  if img.image_before %}
                                 <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ img.image.url }}" data-sub-html="Описание">
@@ -72,7 +72,7 @@
                 <p style="text-align: center">После</p>
 
                 <div class="demo-gallery">
-                    <ul id="lightgallery1" class="list-unstyled row">
+                    <ul  class="lightgallery list-unstyled row">
                         {% for img in address.projectimage_set.all %}
                             {%  if not img.image_before %}
                                 <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ img.image.url }}" data-sub-html="Описание">
@@ -108,4 +108,5 @@
 
 {% block js %}
     {{ block.super }}
+
 {% endblock %}

@@ -75,6 +75,14 @@
         $('#lightgallery1').lightGallery();
     });
 </script>
+<script>
+        let galls = document.getElementsByClassName('lightgallery')
+         console.log(galls)
+    $.each(galls, function( index, value ) {
+  console.log(index,value)
+        $(value).lightGallery();
+});
+    </script>
 <script type="text/javascript">
 			console.log('Skiborg - https://skib.org');
 		</script>
