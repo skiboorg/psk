@@ -1,0 +1,50 @@
+{% extends  'basic.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - О нас
+{% endblock %}
+
+{% block keywords %}
+    {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+  <main>
+    <div class="video-bg-area pt-120 pb-120" style="background-image:url({% static 'assets/img/new/page_top_bg_sm.png' %});margin-bottom: 40px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="b-video">
+                                <h2>О компании</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ <!-- contact-area-start -->
+    <div class="contact-area pb-50">
+        <div class="container">
+            <div class="">{{ text | safe }}</div>
+        </div>
+    </div>
+    <!-- contact-area-end -->
+
+
+</main>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock %}

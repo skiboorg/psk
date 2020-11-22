@@ -314,6 +314,7 @@ class SeoTag(models.Model):
     googleTAG = models.CharField('Код подтверждения google', max_length=255, blank=True, null=True)
 
     indexText = RichTextUploadingField('Текст на главную', blank=True, null=True)
+    aboutText = RichTextUploadingField('Текст на страницу о нас', blank=True, null=True)
 
     def __str__(self):
         return 'Теги и текста для статических страниц'

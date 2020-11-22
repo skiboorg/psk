@@ -50,9 +50,11 @@ def index(request):
 
 def about(request):
     allSevices = Service.objects.filter(isHomeVisible=True)
+
     aboutActive = 'active'
     try:
         seotag = SeoTag.objects.first()
+        text = seotag.aboutText
         pageTitle = seotag.aboutTitle
         pageDescription = seotag.aboutDescription
         pageKeywords = seotag.aboutKeywords
