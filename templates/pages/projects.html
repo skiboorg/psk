@@ -46,10 +46,10 @@
                                     <img src="{{ project.image.url }}" alt="">
                                 </div>
                                 <div class="b-services-content">
-                                    <h3><a href="#">{{ project.name }}</a></h3>
+                                    <h3><a href="{% url 'project' project.nameSlug %}">{{ project.name }}</a></h3>
                                     <p>{{ project.short_description }} </p>
                                     <div class="sv-link">
-                                        <a href="#">подробнее</a>
+                                        <a href="{% url 'project' project.nameSlug %}">подробнее</a>
                                     </div>
                                 </div>
                             </div>

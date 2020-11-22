@@ -1,0 +1,111 @@
+{% extends  'basic.html' %}
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - Статья
+{% endblock %}
+
+{% block keywords %}
+    {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ block.super }}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+    <main>
+        <div class="video-bg-area pt-120 pb-120" style="background-image:url({% static 'assets/img/new/page_top_bg_sm.png' %});margin-bottom: 40px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="b-video">
+
+                            <h2>{{ curProject.name }}</h2>
+                            <p style="max-width: 480px;color: #ffffff">{{ curProject.short_description }}</p>
+                            <div class="work-button mt-30 ">
+                                <a class="b-btn btn-coral" href="#" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <span>Заказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 text-right">
+                        <img src="{{ curProject.image.url }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            {% if curProject.description %}
+                <h3 class="mb-30">Описание</h3>
+                <div class="mb-60">
+                    {{ curProject.description |safe }}
+                </div>
+            {% endif %}
+
+            {% for address in allAddress %}
+                <h3 style="margin-bottom: 30px">{{ address.address }}</h3>
+                <p style="text-align: center">ДО</p>
+
+                <div class="demo-gallery">
+                    <ul id="lightgallery" class="list-unstyled row">
+                        {% for img in address.projectimage_set.all %}
+                            {%  if img.image_before %}
+                                <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ img.image.url }}" data-sub-html="Описание">
+                                    <a href="">
+                                        <img class="img-responsive" src="{{ img.image.url }}" alt="">
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <p style="text-align: center">После</p>
+
+                <div class="demo-gallery">
+                    <ul id="lightgallery1" class="list-unstyled row">
+                        {% for img in address.projectimage_set.all %}
+                            {%  if not img.image_before %}
+                                <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ img.image.url }}" data-sub-html="Описание">
+                                    <a href="">
+                                        <img class="img-responsive" src="{{ img.image.url }}" alt="">
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock %}

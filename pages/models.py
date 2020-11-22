@@ -184,12 +184,10 @@ class Review(models.Model):
 
 
 class Project(models.Model):
-    customer = models.CharField('Название проекта', max_length=40, blank=True, null=True)
     short_description = models.TextField('Краткое описание (380 символов)', blank=False, null=True)
     nameSlug = models.CharField(max_length=255, blank=True, null=True, editable=False)
-    name = models.CharField('Заказчик ', max_length=255, blank=False, null=True)
+    name = models.CharField('Название', max_length=255, blank=False, null=True)
     image = models.ImageField('Изображение (360 x 240)', upload_to='project_img/', blank=True, null=True)
-    town = models.CharField('Город', max_length=40, blank=True, null=True)
     description = RichTextUploadingField('Полное описание проекта', blank=True, null=True)
     pageH1 = models.CharField('Тег H1', max_length=255, blank=True, null=True)
     pageTitle = models.CharField('Название страницы SEO', max_length=255, blank=True, null=True)
@@ -198,7 +196,7 @@ class Project(models.Model):
 
 
     def save(self, *args, **kwargs):
-        slug = slugify(self.customer)
+        slug = slugify(self.name)
         if not self.nameSlug:
             slugRandom = ''
             testSlug = Project.objects.filter(nameSlug=slug)
@@ -214,20 +212,25 @@ class Project(models.Model):
         return f'/projects/{self.nameSlug}/'
 
     def __str__(self):
-        return 'Проект : %s ' % self.customer
+        return 'Проект : %s ' % self.name
 
     class Meta:
         verbose_name = "Проект"
         verbose_name_plural = "Проекты"
 
+class ProjectAddress(models.Model):
+    project = models.ForeignKey(Project, blank=False, null=True, on_delete=models.CASCADE,
+                                verbose_name='Проект')
+    address = models.CharField('Адрес', max_length=255, blank=False, null=True)
 class ProjectImage(models.Model):
-    project = models.ForeignKey(Project,blank=False,null=True,on_delete=models.CASCADE,verbose_name='Фото для проекта')
+    project_address = models.ForeignKey(ProjectAddress,blank=False,null=True,on_delete=models.CASCADE,verbose_name='Фото для проекта')
 
     image = models.ImageField('Фото', upload_to='project_img/', blank=False, null=True)
     image_small = models.CharField(max_length=255, blank=True, default='')
+    image_before = models.BooleanField('До?', default=False)
 
     def __str__(self):
-        return 'Фото для проекта : {}'.format(self.project.name)
+        return 'Фото для проекта : {}'.format(self.project_address.project.name)
 
     class Meta:
         verbose_name = "Фото для проекта"
@@ -252,9 +255,10 @@ class ProjectImage(models.Model):
             image = background
 
         image.thumbnail((250, 250), Image.ANTIALIAS)
-        small_name = '/media/project_img/{}/{}'.format(self.project.id, str(uuid.uuid4()) + '.jpg')
-        os.makedirs('{}/media/project_img/{}'.format(psk.settings.BASE_DIR,self.project.id), exist_ok=True)
-        image.save(psk.settings.BASE_DIR + small_name, 'JPEG', quality=90)
+
+        small_name = '/media/project_img/{}/{}'.format(self.project_address.id, str(uuid.uuid4()) + '.jpg')
+        os.makedirs('{}/media/project_img/{}'.format(psk.settings.BASE_DIR,self.project_address.id), exist_ok=True)
+        image.save(f'{psk.settings.BASE_DIR}/{small_name}', 'JPEG', quality=90)
 
         self.image_small =  small_name
 

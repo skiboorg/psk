@@ -97,9 +97,10 @@ def project(request,slug):
         pageDescription = 'НЕ ЗАПОЛНЕНА ТАБЛИЦА СЕО ТЕГИ'
         pageKeywords = 'НЕ ЗАПОЛНЕНА ТАБЛИЦА СЕО ТЕГИ'
     curProject = get_object_or_404(Project, nameSlug=slug)
-    allImg = ProjectImage.objects.filter(project=curProject)
+    allAddress = ProjectAddress.objects.filter(project=curProject)
     pageH1 = curProject.pageH1
     projectsActive = 'active'
+
     return render(request, 'pages/project.html', locals())
 
 def services(request):
