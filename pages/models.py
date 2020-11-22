@@ -148,7 +148,7 @@ class Review(models.Model):
                                      related_name='review_img')
     image = models.ImageField('Отзыв', upload_to='review_img/', blank=False, null=True)
     image_small = models.CharField(max_length=255, blank=True, null=True)
-
+    is_home = models.BooleanField('Отображать на главной', default=False)
     def image_tag(self):
         if self.image_small:
             return mark_safe('<img src="{}" width="150" height="150" style="object-fit:cover" />'.format(self.image_small))
