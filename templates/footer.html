@@ -20,9 +20,8 @@
                         <h3 class="footer-title">О компании</h3>
                         <div class="footer-link">
                             <ul>
-                                <li><a href="#">Статьи</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">Благодарственные письма</a></li>
+                                <li><a href="{% url 'posts' %}">Статьи</a></li>
+                                <li><a href="{% url 'reviews' %}">Благодарственные письма</a></li>
                             </ul>
                         </div>
                     </div>
@@ -32,11 +31,9 @@
                         <h3 class="footer-title"> Услуги</h3>
                         <div class="footer-link">
                             <ul>
-                                <li><a href="#">Услуга 1</a></li>
-                                <li><a href="#">Услуга 2</a></li>
-                                <li><a href="#">Услуга 3</a></li>
-                                <li><a href="#">Услуга 4</a></li>
-                                <li><a href="#">Услуга 1</a></li>
+                                  {% for service in allSevices %}
+                                        <li><a href="{% url 'service' service.nameSlug %}">{{ service.name }}</a></li>
+                                  {% endfor %}
                             </ul>
                         </div>
                     </div>
@@ -60,7 +57,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="copyright text-center col-md-left">
-                                <p><i class="far fa-copyright"></i> 2020 <a href="#">ПСК УРАЛ</a> </p>
+                                <p><i class="far fa-copyright"></i> 2020 <a href="/">ПСК УРАЛ</a> </p>
                             </div>
                         </div>
                     </div>
