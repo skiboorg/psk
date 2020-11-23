@@ -7,12 +7,7 @@
     <title>Строительство и ремонт под ключ заказать в Челябинске | ПСК «Урал»</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.css">
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
@@ -24,8 +19,6 @@
     <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-
-    <!-- Slider Revolution CSS Files -->
     <link rel="stylesheet" type="text/css" href="{% static 'assets/rs/css/settings.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/rs/css/layers.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/rs/css/navigation.css' %}a">
@@ -78,10 +71,9 @@
 <script>
         let galls = document.getElementsByClassName('lightgallery')
          console.log(galls)
-    $.each(galls, function( index, value ) {
-  console.log(index,value)
-        $(value).lightGallery();
-});
+        $.each(galls, function( index, value ) {
+                $(value).lightGallery();
+        });
     </script>
 <script type="text/javascript">
 			console.log('Skiborg - https://skib.org');
