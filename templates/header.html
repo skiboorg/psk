@@ -60,10 +60,10 @@
                     <div class="main-menu text-center">
                         <nav id="mobile-menu" style="display: block;">
                             <ul>
-                                <li class=""><a href="/">о компании</a>
+                                <li class=""><a href="#">о компании</a>
                                     <ul class="sub-menu text-left">
-                                        <li><a href="{% url 'about' %}">о нас</a></li>
-                                        <li><a href="{% url 'reviews' %}">благодарственные письма</a></li>
+                                        <li><a href="{% url 'about' %}">О нас</a></li>
+                                        <li><a href="{% url 'reviews' %}">Благодарственные письма</a></li>
 
 
                                     </ul>
@@ -77,7 +77,7 @@
                                 </li>
 
                                 <li class="{{projectsActive}}"><a href="{% url 'projects' %}">Наши работы</a></li>
-                                <li class="{{blogActive}}"><a href="{% url 'posts' %}">полезные статьи</a></li>
+                                <li class="{{blogActive}}"><a href="{% url 'posts' %}">Полезные статьи</a></li>
                                 <li class="{{contactsActive}}"><a href="{% url 'contacts' %}">контакты</a></li>
                             </ul>
                         </nav>
