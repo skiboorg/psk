@@ -151,8 +151,6 @@ def service(request, slug):
     pageTitle = curService.pageTitle
     pageDescription = curService.pageDescription
     pageKeywords = curService.pageKeywords
-
-    allImg = curService.review_img.all()
     return render(request, 'pages/service.html', locals())
 
 

@@ -249,6 +249,10 @@ class ProjectAddress(models.Model):
     project = models.ForeignKey(Project, blank=False, null=True, on_delete=models.CASCADE,
                                 verbose_name='Проект')
     address = models.CharField('Адрес', max_length=255, blank=False, null=True)
+
+    def __str__(self):
+        return f'Адрес {self.address} к проекту {self.project.name}'
+
 class ProjectImage(models.Model):
     project_address = models.ForeignKey(ProjectAddress,blank=False,null=True,on_delete=models.CASCADE,verbose_name='Фото для проекта')
 

@@ -1944,9 +1944,8 @@ label {
   font-size: 14px;
   margin: 0;
   padding: 13px 20px;
-  text-transform: capitalize;
   display: block;
-  font-size: 400; }
+  }
 
 .main-menu nav > ul > li:hover > .sub-menu li > a:hover {
   color: #fff;
