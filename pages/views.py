@@ -103,6 +103,7 @@ def project(request,slug):
     curProject = get_object_or_404(Project, nameSlug=slug)
     allAddress = ProjectAddress.objects.filter(project=curProject)
     pageH1 = curProject.pageH1
+    allSevices = Service.objects.all()
     projectsActive = 'active'
 
     return render(request, 'pages/project.html', locals())
