@@ -121,66 +121,32 @@
         </div>
         <div class="container-fluid">
             <div class="row text-center">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w2.jpg'); height: 340px; background-size: cover">
+                {% for project in allProjects %}
+                 <div class="col-xl-3 col-lg-4 col-md-6">
+                     <a href="{% url 'project' project.nameSlug %}">
+                                <div class="b-work position-relative mb-30" style="background: url({{ project.image.url }}); height: 340px; background-size: cover">
                         <!--<div class="b-work-img">-->
                         <!--<img src="assets/img/new/w1.jpeg" alt="">-->
                         <!--</div>-->
-                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
-                            <div class="inner-work-2">
-                                <h2><a href="#">СНТ Мысы</a></h2>
-                                <p>19 улица, 72 участок, Дом</p>
-                                <div class="b-work-link">
-                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                         <p style="color: #ffffff;font-weight: bold;position: absolute;bottom: 45%;left: 10px;right: 10px;background: #00000063;">{{ project.name }}</p>
+{#                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">#}
+{##}
+{#                            <div class="inner-work-2">#}
+{#                                <h2><a href="#">{{ project.customer }}</a></h2>#}
+{#                                <p>{{ project.short_description }}</p>#}
+{#                                <div class="b-work-link">#}
+{#                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w3.jpg'); height: 340px; background-size: cover">
-                        <!-- <div class="b-work-img">
-                            <img src="assets/img/work/wo-02.jpg" alt="">
-                        </div> -->
-                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
-                            <div class="inner-work-2">
-                                <h2><a href="#">Фармленд</a></h2>
-                                <p>Бейвеля 37а</p>
-                                <div class="b-work-link">
-                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w4.jpg'); height: 340px; background-size: cover">
+                     </a>
 
-                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
-                            <div class="inner-work-2">
-                                <h2><a href="#">Ул. Чичерина 36в, Квартира</a></h2>
-
-                                <div class="b-work-link">
-                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="b-work position-relative mb-30" style="background: url('assets/img/new/w5.jpg'); height: 340px; background-size: cover">
+                {% endfor %}
 
-                        <div class="b-work-content-2 b-work-content-coral" style="left: 0; right: 0;">
-                            <div class="inner-work-2">
-                                <h2><a href="#">Магнит</a></h2>
 
-                                <div class="b-work-link">
-                                    <a href="#"><i class="far fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
             <div class="row">

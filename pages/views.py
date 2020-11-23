@@ -119,6 +119,7 @@ def services(request):
         pageKeywords = 'НЕ ЗАПОЛНЕНА ТАБЛИЦА СЕО ТЕГИ'
     allSevices = Service.objects.all()
     servicesActive = 'active'
+    allProjects = Project.objects.all()
     allReviews = Review.objects.filter(is_home=True)
     return render(request, 'pages/services.html', locals())
 
@@ -127,6 +128,7 @@ def contacts(request):
     allSevices = Service.objects.filter(isHomeVisible=True)
     contactsActive = 'active'
     allSevices = Service.objects.all()
+
     form = CallbackForm()
     try:
         seotag = SeoTag.objects.first()
@@ -151,6 +153,7 @@ def service(request, slug):
     pageTitle = curService.pageTitle
     pageDescription = curService.pageDescription
     pageKeywords = curService.pageKeywords
+    allCert = Cert.objects.filter(is_home=True)
     return render(request, 'pages/service.html', locals())
 
 

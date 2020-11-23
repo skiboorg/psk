@@ -31,7 +31,7 @@
                         <p style="max-width: 480px;color: #ffffff">{{ curService.short_description }}</p>
                         <div class="work-button mt-30 ">
                             <a class="b-btn btn-coral" href="#" data-toggle="modal" data-target="#exampleModalCenter">
-                                <span>Заказать</span>
+                                <span>Заказать услугу</span>
                             </a>
                         </div>
                     </div>
@@ -44,24 +44,22 @@
     </div>
 
     <div class="container">
-
+    {% if  curService.description%}
         <h3 class="mb-30">Подробное описание услуги</h3>
         <div class="mb-60">
             {{ curService.description |safe }}
         </div>
+    {% endif %}
         <h3 class="mb-30">Этапы оказания услуги</h3>
         <div class="steps mb-60">
             {% for step in curService.steps.all %}
             <div class="step-item">
                 <p class="step-item__num">{{ step.number }}</p>
-                <p class="step-item__text">{{ step.text }}</p>
+                <p class="step-item__text">{{ step.text | safe}}</p>
             </div>
         {% endfor %}
-
-
-
         </div>
-
+    {% if curService.features.all %}
         <h3 class="mb-30">Преимущества</h3>
         <div class="steps mb-30">
               {% for step in curService.features.all %}
@@ -70,18 +68,110 @@
                 <p class="step-item__text cl-bl">{{ step.text }}</p>
             </div>
         {% endfor %}
+        </div>
+    {% endif %}
+    </div>
+      <!-- about-us-area-start -->
+    <div class="about-us-area pb-155">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 mb-30">
+                    <div class="about-us-img pos-rel">
+                        <img src="{% static 'assets/img/111.png' %}" alt="">
+                        <div class="about-us-2-img">
+                             <img src="{% static 'assets/img/111.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 mb-30">
+                    <div class="about-us-wrapper">
+                        <div class="section-title coral-section">
 
-
+                            <h3>Наши достижения</h3>
+                            <p>Мы работаем во многих регионах РФ. Нашими постоянными заказчиками являются такие
+                                федеральные сети, как Красное и Белое, Магнит, Аптеки Фармленд, Zenden, DNS, Технопоинт,
+                            Пятерочка.</p>
+                        </div>
+                        <div class="row mt-40">
+                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                                <div class="single-counter">
+                                    <div class="counter-3-icon f-left">
+                                        <i class="fal fa-calendar"></i>
+                                    </div>
+                                    <div class="counter-3-text">
+                                        <h3>5</h3>
+                                        <p>Лет на рынке</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                                <div class="single-counter">
+                                    <div class="counter-3-icon f-left">
+                                        <i class="flaticon-address"></i>
+                                    </div>
+                                    <div class="counter-3-text">
+                                        <h3>2 037</h3>
+                                        <p>Реализованных проектов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                                <div class="single-counter">
+                                    <div class="counter-3-icon f-left">
+                                        <i class="flaticon-hammer"></i>
+                                    </div>
+                                    <div class="counter-3-text">
+                                        <h3>104</h3>
+                                        <p>Профессионалов</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fea-btn mt-30">
+                            <a class="b-btn btn-coral" href="{% url 'about' %}">
+                                <span>подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
+    <!-- about-us-area-end -->
+  <!-- testimonial-area -->
+    <div class="client-area black-bg pt-125 pb-130" style="background-image:url({% static 'assets/img/bg/bg-8.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                    <div class="section-title white-title text-center mb-70">
+                        <!-- <span>what our clients say</span> -->
+                        <h3 style="color: #fff;">Сертификаты</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-gallery">
+                <ul id="lightgallery1" class="list-unstyled row">
+                    {% for review in allCert %}
+                    <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ review.image.url }}" data-sub-html="Описание">
+                        <a href="">
+                            <img class="img-responsive" src="{{ review.image.url }}" alt="">
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="work-button mt-30 text-center">
+                        <a class="b-btn btn-coral" href={% url 'certificates' %}>
+                            <span>смотреть все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial-area end -->
 
     <!-- testimonial-area -->
     <div class="client-area black-bg pt-125 pb-130" style="background-image:url(assets/img/bg/bg-8.jpg)">
@@ -103,9 +193,6 @@
                         </a>
                     </li>
                     {% endfor %}
-
-
-
                 </ul>
             </div>
             <div class="row">
@@ -120,7 +207,6 @@
         </div>
     </div>
     <!-- testimonial-area end -->
-
     <div class="brand-area pt-130">
         <div class="container">
             <div class="section-title coral-section mr-40 mb-30">
@@ -131,25 +217,15 @@
                 <div class="row brand-active">
                     {% for client in allClients %}
                      <div class="col-xl-12">
-                        <div class="brand-img text-center">
+                       <div style="display: flex;align-items: center;min-height: 105px;" class="brand-img text-center">
                             <img src="{{ client.image.url }}" alt="" />
                         </div>
                     </div>
                     {% endfor %}
-
-
-
-
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
 </main>
 {% endblock %}
 
