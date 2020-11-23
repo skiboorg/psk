@@ -144,8 +144,6 @@ class ServiceFeature(models.Model):
         verbose_name_plural = "Приемущества для услуг"
 
 class Review(models.Model):
-    service = models.ManyToManyField(Service, blank=True, null=True, verbose_name="Отзыв для услуг",
-                                     related_name='review_img')
     image = models.ImageField('Отзыв', upload_to='review_img/', blank=False, null=True)
     image_small = models.CharField(max_length=255, blank=True, null=True)
     is_home = models.BooleanField('Отображать на главной', default=False)
@@ -160,19 +158,15 @@ class Review(models.Model):
     def save(self, *args, **kwargs):
         fill_color = '#fff'
         image = Image.open(self.image)
-
         if image.mode in ('RGBA', 'LA'):
             background = Image.new(image.mode[:-1], image.size, fill_color)
             background.paste(image, image.split()[-1])
             image = background
-
         image.thumbnail((250, 250), Image.ANTIALIAS)
         small_name = '/media/review_img/{}'.format(str(uuid.uuid4()) + '.jpg')
         os.makedirs('{}/media/review_img/'.format(psk.settings.BASE_DIR), exist_ok=True)
         image.save(f'{psk.settings.BASE_DIR}/{small_name}', 'JPEG', quality=90)
-
         self.image_small =  small_name
-
         super(Review, self).save(*args, **kwargs)
 
     def __str__(self):
@@ -181,6 +175,39 @@ class Review(models.Model):
     class Meta:
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
+
+class Cert(models.Model):
+    image = models.ImageField('Сертификат', upload_to='cert_img/', blank=False, null=True)
+    image_small = models.CharField(max_length=255, blank=True, null=True)
+    is_home = models.BooleanField('Отображать на главной', default=False)
+    def image_tag(self):
+        if self.image_small:
+            return mark_safe('<img src="{}" width="150" height="150" style="object-fit:cover" />'.format(self.image_small))
+        else:
+            return mark_safe('<span>НЕТ МИНИАТЮРЫ</span>')
+
+    image_tag.short_description = 'Картинка'
+
+    def save(self, *args, **kwargs):
+        fill_color = '#fff'
+        image = Image.open(self.image)
+        if image.mode in ('RGBA', 'LA'):
+            background = Image.new(image.mode[:-1], image.size, fill_color)
+            background.paste(image, image.split()[-1])
+            image = background
+        image.thumbnail((250, 250), Image.ANTIALIAS)
+        small_name = '/media/cert_img/{}'.format(str(uuid.uuid4()) + '.jpg')
+        os.makedirs('{}/media/cert_img/'.format(psk.settings.BASE_DIR), exist_ok=True)
+        image.save(f'{psk.settings.BASE_DIR}/{small_name}', 'JPEG', quality=90)
+        self.image_small =  small_name
+        super(Cert, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return 'Сертификат  : %s ' % self.id
+
+    class Meta:
+        verbose_name = "Сертификат"
+        verbose_name_plural = "Сертификаты"
 
 
 class Project(models.Model):

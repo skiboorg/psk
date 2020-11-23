@@ -21,38 +21,27 @@
 {% block content %}
   <main>
   <div class="container">
-      <h1 style="padding: 20px 0">Благодарственные письма</h1>
+      <h1 style="padding: 20px 0">Сертификаты</h1>
   </div>
 
     <!-- testimonial-area -->
     <div class="client-area black-bg pt-125 pb-130" style="background-image:url({% static 'assets/img/bg/bg-8.jpg' %});margin-bottom: 40px">
         <div class="container">
-
              <div class="demo-gallery">
                 <ul id="lightgallery" class="list-unstyled row">
-                    {% for review in allReviews %}
+                    {% for review in allCerts %}
                     <li class="col-xs-6 col-sm-4 col-md-3 mb-10"  data-src="{{ review.image.url }}" data-sub-html="Описание">
                         <a href="">
                             <img class="img-responsive" src="{{ review.image.url }}" alt="">
                         </a>
                     </li>
                     {% endfor %}
-
-
-
                 </ul>
             </div>
 
         </div>
     </div>
     <!-- testimonial-area end -->
-
-
-
-
-
-
-
 </main>
 {% endblock %}
 

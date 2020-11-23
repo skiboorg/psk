@@ -28,6 +28,7 @@ def index(request):
     allBanners = Banner.objects.filter(isActive=True).order_by('order')
     allClients = Client.objects.all().order_by('order')
     allReviews = Review.objects.filter(is_home=True)
+    allCert = Cert.objects.filter(is_home=True)
     indexSevices = Service.objects.filter(isHomeVisible=True)
     allSevices = Service.objects.all()
     allProjects = Project.objects.all()
@@ -48,6 +49,9 @@ def index(request):
     return render(request, 'pages/index.html', locals())
 
 
+def certificates(request):
+    allCerts = Cert.objects.all()
+    return render(request, 'pages/certificates.html', locals())
 def reviews(request):
     allReviews = Review.objects.all()
     return render(request, 'pages/reviews.html', locals())
